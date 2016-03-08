@@ -7,6 +7,16 @@ window.addEventListener('load', function() {
 	}	
 	document.querySelector("#prijavniGumb").addEventListener('click', izvediPrijavo);
 	
+	
+	var opomniki = function() {
+		var cas = document.querySelector("#cas_opomnika").value;
+		var naziv = document.querySelector("#naziv_opomnika").value;
+		alert(cas + naziv);
+		document.querySelector("#cas_opomnika").innerHTML = "";
+		document.querySelector("#naziv_opomnika").innerHTML = "";
+	}
+	
+	document.querySelector("#dodajGumb").addEventListener('click', opomniki);
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
